@@ -1,0 +1,14 @@
+# === CodeArts 本地配置/记忆（不入库）===
+.codeartsdoer/
+**/.codeartsdoer/
+
+# === 课件资料（不纳入版本库）===
+微服务项目开发脚手架课件/
+
+# === 敏感信息：中间件账号密码清单（切勿提交）===
+MIDDLEWARE_CREDENTIALS.md
+
+# === 部署压缩包（由 deploy 目录打包产生，不入库）===
+deploy.zip
+# === 中间件部署配置（含明文密码、nacos secret key，不入库）===
+frameworkJava-backend/deploy/
