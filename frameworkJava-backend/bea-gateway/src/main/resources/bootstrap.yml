@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: bea-gateway
+  profiles:
+    active: "${RUN_ENV:dev}"
+  cloud:
+    nacos:
+      discovery:
+        username: nacos
+        password: bite@123
+        namespace: "frameworkjava-${RUN_ENV:dev}"
+        server-addr: "${NACOS_ADDR:39.97.254.205:8848}"
+      config:
+        username: nacos
+        password: bite@123
+        namespace: "frameworkjava-${RUN_ENV:dev}"
+        server-addr: "${NACOS_ADDR:39.97.254.205:8848}"
+        file-extension: yaml
+
+logging:
+  pattern:
+    console: '[%thread] %-5level %logger{36} - %msg%n'

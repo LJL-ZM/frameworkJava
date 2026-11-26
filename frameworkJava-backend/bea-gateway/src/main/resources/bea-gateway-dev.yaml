@@ -1,0 +1,18 @@
+# 网关配置（配置中心）
+# 说明：需在 Nacos 配置中心创建配置
+#   data_id  = bea-gateway-dev.yaml
+#   group    = DEFAULT_GROUP
+#   命名空间  = frameworkjava-dev
+server:
+  port: 18080
+spring:
+  cloud:
+    gateway:
+      routes:
+        # 模板模块
+        - id: bea-mstemplate
+          uri: lb://bea-mstemplate
+          predicates:
+            - Path=/mstemplate/**
+          filters:
+            - StripPrefix=1
